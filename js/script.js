@@ -38,6 +38,10 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+
+            activeIndex: 0,
+
+
             slides: [
                 {
                     image: 'img/01.webp',
@@ -66,8 +70,26 @@ createApp({
                 }
             ]
 
-            isthisActive: 0;
+           
         }
+
+        methods: {
+            prevSlide() {
+                if (this.activeIndex === 0) {
+                    this.activeIndex = this.slides.length - 1;
+                } else {
+                    this.activeIndex--;
+                }
+            },
+            nextSlide() {
+                if (this.activeIndex === this.slides.length - 1) {
+                    this.activeIndex = 0;
+                } else {
+                    this.activeIndex++;
+                }
+            }
+        }
+
     }
 }).mount("#app")
 
