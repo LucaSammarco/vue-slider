@@ -16,11 +16,14 @@
 
     <div id="app">
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper d-flex align-items-center" tabindex="0">
+                <!-- Pulsante sinistro -->
+                <button class="btn btn-primary me-3">Left</button>
+                
                 <div class="item">
                     <img src="img/01.webp" alt="Spiderman" />
                     <div class="text">
-                        <h3>Spiderman</h3>
+                        <h3>{{ slides[0].title }}</h3>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
                             tempore aliquid deleniti aut
@@ -29,15 +32,15 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Pulsante destro -->
+                <button class="btn btn-primary ms-3">Right</button>
             </div>
         </div>
-
     </div>
-
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-
 <script type="text/javascript" src="js/script.js"></script> 
 
 </body>
